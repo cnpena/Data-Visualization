@@ -1,0 +1,29 @@
+/* Creates the x axis on the bottom of the graph. Axes made of path and line elements */
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+body{
+    background-color: #E6E6E6;
+}
+
+p{
+    text-indent: 40px;
+}
+
+var xAxis = d3.svg.axis()
+                  .scale(xScale)
+                  .orient("bottom");
+
+svg.append("g")
+    .call(xAxis);
+
+.axis text{
+    font: Times;
+    font-size: 14px;
+    font-weight: bold;
+}
