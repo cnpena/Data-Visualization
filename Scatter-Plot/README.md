@@ -7,7 +7,7 @@ Along the x-axis is GDP in Trillions of US Dollars and along the y-axis is EPC (
 Mouse over the circles to see the country name, population, GDP, EPC and total energy consumption. You can also pan and zoom through the scatter plot.
 
 
-Visualization: https://cnpena.github.io/Scatter-Plot/ <br>
+Visualization: https://cnpena.github.io/Data-Visualization/Scatter-Plot/ <br>
 Celine Peña <br>
 cnpena@ucsc.edu <br>
 Suresh Lodha <br>
