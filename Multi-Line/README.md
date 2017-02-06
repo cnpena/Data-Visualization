@@ -7,7 +7,7 @@ Along the x-axis is years 2000 - 2010 and along the y-axis is EPC (Energy Consum
 
 When initially opening the visualization, animates the lines across the screen.
 
-Visualization: https://cnpena.github.io/Multi-Line/  <br>
+Visualization: https://cnpena.github.io/Data-Visualization/Multi-Line/  <br>
 Celine Peña <br>
 cnpena@ucsc.edu <br>
 Suresh Lodha <br>
