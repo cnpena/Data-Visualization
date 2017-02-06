@@ -1,0 +1,222 @@
+<!--
+  AUTHORS: Edgar Bernal, Celine Peña
+  DATE   : 2016 DEC 7
+  CLASS  : CMPS 165
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cost of Fast Fashion</title>
+    
+<!-- CSS FILES -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="dependencies/d3.geomap.css">
+    <link rel="stylesheet" type="text/css" href="dependencies/d3.slider.css">
+    <link rel="stylesheet" type="text/css" href="geomap.css">
+    <link rel="stylesheet" href="style.css">
+    
+<!-- JS FILES -->
+    <script type= "text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script type= "text/javascript" src="dependencies/d3.geomap.dependencies.min.js"></script>
+    <script type= "text/javascript" src="dependencies/d3.geomap.js"></script>
+    <script type= "text/javascript" src="dependencies/d3.slider.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
+  </head>
+  
+  <body>
+
+    <header class="main-header shadow" id="top">
+      <center><h1>Environmental Cost of the Fashion Industry</h1></center>
+    </header>
+
+    <!-- main container -->
+    <div class="flex-container shadow">
+      <div class="sub-container">
+        <center>
+          <p>
+            There is a significant lack of sustainability in the textile industry. 
+            Rapid consumption has increased both air and water pollution associated 
+            with the manufacturing of clothing, particularly harming developing 
+            nations tasked with its fabrication and exportation. Since clothing 
+            is being consumed so quickly, it is also more disposable than ever before, 
+            with the US alone throwing away 11 million tons of clothing every year. 
+            Being more conscious of our clothing purchases can help us fight 
+            this largely ignored contributor to global warming.
+          </p>
+          <p>
+            This map visualizes each countries' textile exports over 23 years, including a 
+            percent change over the same span. Unfortunately, textile pollution from 
+            manufacturing grows in parallel and is becoming increasingly harmful to 
+            exporting nations. The map further reflects industrial outsourcing from 
+            the US as lower costs are pursued to meet demand.
+          </p>
+        </center>
+        <br>
+		<center><h2>Global Clothing Exports</h2></center>
+        <center>
+          <div class="row" id="interactivity-row">
+                 <!-- map and tooltip-->
+                 <div class="col-md-12" id="map-container">
+                     <script type="text/javascript" src="geomap.js"></script>
+                     <div id="map"></div>
+                 </div>
+                 <!-- slider and button div   -->
+                 <div class="col-md-11 col-md-offset-1" id="interactivity">
+                     <button onclick="animateIt()" id="play" type="button" class="btn btn-info" title="Animate data from 1990 to 2013">
+                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                     </button>
+                     <div id="slider"></div>
+                 </div>
+
+          </div>
+		</center>
+      </div>
+    </div>
+    
+    <!-- chart container -->
+    <div class="flex-container shadow" style="text-align: center;">
+      <div class="container" style="width: 50%;">
+        <div id="tooltip-pie" class="hidden">
+            <p><span id="id">text</span></p>
+            <p><span id="percent">text</span></p>
+            <p><span id="number">text</span></p>
+        </div>
+        <!-- pie chart div -->
+        <span>
+			<p>Carbon emissions of a white, 100% cotton, size 40-42 T-Shirt</p>
+        </span>
+        <br>
+        <div class="sub-container pie-container"></div>
+        <script type="text/javascript" src="pieChart.js"></script> 
+        <div class="container" style="clear:both; padding-top:50px;">The carbon footprint of a single cotton t-shirt has been evaluated through life-cycle analysis (LCA). As shown above, the manufacture and consumer use phase each account for almost one third of total emissions of a t-shirt. Four processes comprise the emissions during the manufacture phase: spinning, knitting, dyeing and ready garment (RMG). The use phase, assuming the t-shirt is washed 55 times, accounts for 31% of emissions. The washing temperature, load level of the washing machine and dryer and efficiency level of the devices also affect the carbon footprint during the use phase. </div>
+      </div>
+		
+      <div class="container" style="width: 50%;">
+        <div id="tooltip-bar" class="hidden">
+            <p><span id="id">text</span></p>
+            <p><span id="percent">text</span></p>
+            <p><span id="number">text</span></p>
+        </div>
+          <!-- pie chart div -->
+        <span>
+        </span>
+		  <p>Freshwater Required for One Pound of Crop</p>
+        <div class="sub-container bar-container"></div>
+        <script type="text/javascript" src="barGraph.js"></script>
+        <div class="container" style="clear: both; position:relative; top:-90px;">Calculated per pound of product, cotton is the most freshwater-intensive crop. It can use between 840 - 3475 gallons of freshwater per pound of cotton. It takes about .5 pounds of cotton to make a t-shirt, meaning that it can take between 420 - 1740 gallons of water for a single t-shirt. It is estimated that between 1% and 6% of total global freshwater withdrawl is due to cotton irrigation.</div>
+		  
+      </div>
+      
+    </div> <!-- End Chart flex-container -->
+    
+    <!-- footer container -->
+    <div class="container shadow">
+      <header class="section-header">
+        <h3>Site Info</h3>
+      </header>
+      <div class="flex-container">
+      <div class="sub-container">
+        <dl>
+          <dt>Created by</dt>
+          <dd><small>
+            Edgar Bernal-Sanchez and Celine Peña
+          </small></dd>
+	  <dd><small>
+	    UCSC CMPS 165 - Fall '16 Quarter
+	  </dd></small>
+          <dd><small>
+            using resources provided by Suresh Lodha
+          </small></dd>
+        </dl>
+      </div>
+      <div class="sub-container">
+        <dl>
+          <dt>Files Submitted</dt>
+          <dd><small>
+            index.html
+          </small></dd>
+          <dd><small>
+            geomap.js
+          </small></dd>
+          <dd><small>
+            geomap.css
+          </small></dd>
+          <dd><small>
+            carbonEmissionsData.csv
+          </small></dd>
+          <dd><small>
+            barGraph.js
+          </small></dd>
+          <dd><small>
+            pieChart.js
+          </small></dd>
+          <dd><small>
+            style.css
+          </small></dd>
+          <dd><small>
+            textile-exports.csv
+          </small></dd>
+          <dd><small>
+            countries.json
+          </small></dd>
+          <dd><small>
+            d3.geomap.js
+          </small></dd>
+          <dd><small>
+            d3.geomap.css
+          </small></dd>
+          <dd><small>
+            d3.geomap.dependencies.js
+          </small></dd>
+          <dd><small>
+            d3.slider.css
+          </small></dd>
+          <dd><small>
+            d3.slider.js
+          </small></dd>
+          <br>
+          <dt>Sources</dt>
+          <dd><small>
+            See GitHub for source files: <a href="https://github.com/edgar64/textile-industry" target="_blank">GitHub.com</a>
+          </small></dd>
+          <dd><small>
+            Direct Link to Visualization: <a href="https://edgar64.github.io/textile-industry/" target="_blank">GitHub.com</a>
+          </small></dd>
+        </dl>
+      </div>
+      <div class="sub-container">
+        <dl>
+          <dt>References</dt>
+        <dd><small>
+          <a href="https://www.wto.org/english/res_e/statis_e/its2014_e/its14_merch_trade_product_e.htm" target="_blank">Clothing exports of selected economies, 1990-2013 - WTO</a>
+        </small></dd>
+        <dd><small>
+          <a href="http://www.intracen.org/Cotton-and-Climate-Change-Impacts-and-options-to-mitigate-and-adapt/" target="_blank">Cotton and Climate Change </a>
+        </small></dd>
+        <dd><small>
+          <a href="http://d2ouvy59p0dg6k.cloudfront.net/downloads/impact_long.pdf" target="_blank">
+			  The Impact of Cotton on Fresh Water Resources and Ecosystems </a>
+        </small></dd>
+		<dd><small>
+          <a href="http://sureshlodha.github.io/Projects_Spring16/projects/water/index.html" target="_blank">
+			  Water Scarcity Example </a>
+        </small></dd>
+        <dd><small>
+          <a href="https://bl.ocks.org/mbostock/3887235" target="_blank">Mike Bostock - Pie Chart Example</a>
+        </small></dd>
+			
+        </dl>
+      </div>
+    </div>
+    </div>
+
+    <!-- Page footer -->
+    <footer class="shadow">
+      <p><a href="#top">Top of Page</a></p>
+    </footer>
+
+  </body>
+</html>

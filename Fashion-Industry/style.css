@@ -1,0 +1,317 @@
+/*
+  AUTHOR: Edgar Bernal
+  DATE  : 2016 June 19
+  CLASS : CIS 89A
+*/
+
+/* Body styling */
+/*****************************/
+body {
+  color: #eaeaea;
+  background-color: #eaeaea;
+  font-family: 'Lato', sans-serif;
+  width: 85%;
+/*  max-width: 900px;*/
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+/*****************************/
+
+/* Header styling */
+/*****************************/
+header {
+  color: #eaeaea;
+  background-color: #759FBD;
+  padding: 5px 30px;
+  margin-bottom: 37px;
+}
+/*****************************/
+
+/* Link styling */
+/*****************************/
+a {
+  color: #185e7a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a4e7e7;
+}
+
+a:active {
+  color: #32a3a3;
+}
+/*****************************/
+
+/* List styling */
+/*****************************/
+ul {
+  list-style-image: url(rsz_200px-schwett_kl_2a_blacksvg.png);
+}
+/*****************************/
+
+/* Fieldset formatting */
+/*****************************/
+fieldset {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #44dcdd;
+  margin-bottom: 15px;
+}
+
+legend {
+  padding: 4px 12px;
+}
+/*****************************/
+
+/* Footer styling */
+/*****************************/
+footer {
+  color: #44dcdd;
+  background-color: #759FBD;
+  text-align: right;
+  padding: 5px 20px;
+  margin: 37px 0px;
+  clear: both;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/*****************************/
+
+/* Shadow styling */
+/*****************************/
+.shadow {
+  box-shadow: 0px 4px 8px -2px #000000;
+}
+/******************************/
+
+/* Header type styling */
+/******************************/
+.main-header {
+  padding: 5px 20px;
+  margin-top: 37px;
+}
+
+.section-header {
+  padding: 5px 0px;
+}
+
+.sub-header {
+  font-size: 0.8em;
+  padding: 0px;
+}
+/*****************************/
+
+/* Container styling */
+/*****************************/
+.container {
+  height: auto;
+  width: auto;
+  background-color: #759FBD;
+  padding: 0px 25px 10px;
+  margin-bottom: 37px;
+}
+
+.container a {
+  color: #185e7a;
+}
+
+.container a:hover {
+  color: #efffff;
+}
+
+.container a:active {
+  color: #32a3a3;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.sub-container {
+  height: auto;
+  width: auto;
+/*  padding: 0px 25px 10px;*/
+  margin: 0px 25px 37px 0px;
+  float: left;
+  flex-shrink: 2;
+}
+
+.image-container {
+  padding: 0px;
+  flex-shrink: 1;
+  float: left;
+}
+
+.image-container img {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.standalone {
+  height: auto;
+  width: auto;
+  padding-right: 37px;
+  margin-bottom: 37px;
+  float: left;
+  flex-shrink: 1;
+}
+/*****************************/
+/* Flexbox styling */
+/*****************************/
+.flex-container {
+  height: auto;
+  margin-bottom: 37px;
+  padding: 25px;
+  background-color: #759FBD;
+/*  clear: both;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.flex-container a {
+  color: #185e7a;
+}
+
+.flex-container a:hover {
+  color: #a4e7e7;
+}
+
+.flex-sub-container {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+/*****************************/
+
+/* Media styling */
+/*****************************/
+.image-medium {
+  width: 200px;
+  height: 250px;
+}
+
+.media-details {
+  font-size: 0.8em;
+  color: #90fdcf;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/*****************************/
+
+/* Table styling */
+/*****************************/
+.table-rubric {
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.table-rubric th {
+  font-size: 1.1em;
+  padding: 10px;
+  width: 10em;
+  text-align: center;
+  border-bottom: 2px solid;
+}
+
+.table-rubric td {
+  padding: 10px;
+  width: 10em;
+}
+
+.criteria {
+  text-align: center;
+  width: 10%;
+  border-right: 1px solid;
+}
+/*****************************/
+
+/* Input area styling */
+/*****************************/
+.input-container {
+  width: 100%;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.input-table {
+  width: 100%;
+  clear: both;
+}
+
+.input-table td {
+  height: 35px;
+}
+
+.input-about {
+  color: #6a6a6a;
+  font-size: 0.8em;
+  padding: 0px 5px;
+}
+/*****************************/
+
+/* Button styling*/
+/*****************************/
+.button-submit {
+  color: #00a1e0;
+  background-color: #eaeaea;
+  font-size: 1.3em;
+  width: 40%;
+  margin: 0px auto 0px;
+  padding: 5px;
+  border: 2px solid;
+  border-color: #eaeaea;
+}
+
+.button-submit:hover {
+  background-color: #32a3a3;
+  border-color: #32a3a3;
+}
+
+.button-submit:active {
+  color: #44dcdd;
+  background-color: #247575;
+  border-color: #247575;
+}
+
+.button-reset {
+  color: #1a6785;
+  background-color: #b8b8b8;
+  font-size: 1.3em;
+  width: 40%;
+  margin: 0px auto 0px;
+  padding: 5px;
+  border: 2px solid;
+  border-color: #b8b8b8;
+}
+
+.button-reset:hover {
+  background-color: #32a3a3;
+  border-color: #32a3a3;
+}
+
+.button-reset:active {
+  color: #44dcdd;
+  background-color: #247575;
+  border-color: #247575;
+}
+/****************************/
+
+/* Citation styling */
+/*****************************/
+.citation {
+  padding: 0px 10px 0px;
+  text-align: right;
+  font-size: 0.8em;
+}
+/*****************************/
